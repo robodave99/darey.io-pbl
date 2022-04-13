@@ -295,8 +295,10 @@ Create a new file named index.php inside your custom web root folder:
 vim /var/www/projectlamp/index.php
 This will open a blank file. Add the following text, which is valid PHP code, inside the file:
 
+ ```javascript
    <?php
  phpinfo();
+ ```
 
 When you are finished, save and close the file, refresh the page and you will see a page similar to this:
 
