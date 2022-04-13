@@ -222,6 +222,7 @@ Then, create and open a new configuration file in Apache’s sites-available dir
 sudo vi /etc/apache2/sites-available/projectlamp.conf
 This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
 
+ ```javascript
 <VirtualHost *:80>
     ServerName projectlamp
     ServerAlias www.projectlamp 
@@ -230,6 +231,8 @@ This will create a new blank file. Paste in the following bare-bones configurati
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+  ```
+  
 To save and close the file, simply follow the steps below:
 
 Hit the esc button on the keyboard
@@ -275,14 +278,15 @@ With the default DirectoryIndex settings on Apache, a file named index.html will
 In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
 
 sudo vim /etc/apache2/mods-enabled/dir.conf
-
+   ```javascript
   <IfModule mod_dir.c>
         #Change this:
         #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
         #To this:
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
   </IfModule>
-
+   ```
+  
 After saving and closing the file, you will need to reload Apache so the changes take effect:
 
 sudo systemctl reload apache2
