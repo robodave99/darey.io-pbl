@@ -295,3 +295,5 @@ This will open a blank file. Add the following text, which is valid PHP code, in
    phpinfo();
 When you are finished, save and close the file, refresh the page and you will see a page similar to this:
 ### Screenshot of the final app hosted on aws
+![Screenshot (5)](https://user-images.githubusercontent.com/52970510/163075872-4e576737-930b-4a20-8048-e620158e5639.png)
+
