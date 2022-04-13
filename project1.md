@@ -267,19 +267,21 @@ In the output you will see your server’s public hostname (DNS name) and public
 
 http://<Public-DNS-Name>:80
 You can leave this file in place as a temporary landing page for your application until you set up an index.php file to replace it. Once you do that, remember to remove or rename the index.html file from your document root, as it would take precedence over an index.php file by default.
-  
-## STEP 5 — ENABLE PHP ON THE WEBSITE
+
+STEP 5 — ENABLE PHP ON THE WEBSITE
 With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page.
 
 In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
 
 sudo vim /etc/apache2/mods-enabled/dir.conf
-<IfModule mod_dir.c>
+
+  <IfModule mod_dir.c>
         #Change this:
         #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
         #To this:
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-</IfModule>
+  </IfModule>
+
 After saving and closing the file, you will need to reload Apache so the changes take effect:
 
 sudo systemctl reload apache2
@@ -291,9 +293,11 @@ Create a new file named index.php inside your custom web root folder:
 
 vim /var/www/projectlamp/index.php
 This will open a blank file. Add the following text, which is valid PHP code, inside the file:
-   <?php
-   phpinfo();
-When you are finished, save and close the file, refresh the page and you will see a page similar to this:
-### Screenshot of the final app hosted on aws
-![Screenshot (5)](https://user-images.githubusercontent.com/52970510/163075872-4e576737-930b-4a20-8048-e620158e5639.png)
 
+   <?php
+ phpinfo();
+
+When you are finished, save and close the file, refresh the page and you will see a page similar to this:
+
+### Screenshot of the final app hosted on aws
+![Screenshot (5)](https://user-images.githubusercontent.com/52970510/163077003-a5edc431-03b4-4262-b2ef-0232e1f541b0.png)
