@@ -291,10 +291,7 @@ Create a new file named index.php inside your custom web root folder:
 
 vim /var/www/projectlamp/index.php
 This will open a blank file. Add the following text, which is valid PHP code, inside the file:
-
-<?php
-phpinfo();
+   <?php
+   phpinfo();
 When you are finished, save and close the file, refresh the page and you will see a page similar to this:
-
-# Screenshot of the final app hosted on AWS
-![Screenshot (5)](https://user-images.githubusercontent.com/52970510/163074780-32f57d1b-8b55-4534-8852-68253bcddf84.png)
+### Screenshot of the final app hosted on aws
