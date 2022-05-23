@@ -195,13 +195,21 @@ Commit your changes, create a Pull Request and merge them to master branch, make
 
 ![Screenshot (150)](https://user-images.githubusercontent.com/52970510/169778140-33d889ca-07c4-405c-b52e-b1387ff589a7.png)
 
+Now run the playbook against your uat inventory and see what happens:
+```javascript
+sudo ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yaml
+```
+### Ansible playbook running
+![Screenshot (151)](https://user-images.githubusercontent.com/52970510/169818149-9e7b57da-3eac-41b0-bcb2-c9b9626b5438.png)
 
-  
+You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
+```javascript
+http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
 
+or
 
-
-
-
-
-
-
+http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+```
+    
+### Screenshot
+![Screenshot (152)](https://user-images.githubusercontent.com/52970510/169818394-41ab929e-8c30-484b-8275-204ed023fce9.png)
