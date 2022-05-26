@@ -81,21 +81,6 @@ Auto Scaling Groups for tooling and wordpress were also created
 
 ![image](https://user-images.githubusercontent.com/87030990/169606056-9d24cef6-25cd-4bf9-9fe4-aff90f5d488f.png)
 
-The health status of each insances were verified to be healthy:
-
-For nginx
-
-![image](https://user-images.githubusercontent.com/87030990/169608976-ca142750-4a9c-4920-bdd2-50d7b1546639.png)
-
-For Wordpress
-
-![image](https://user-images.githubusercontent.com/87030990/169614889-94c3f6af-6aa5-4977-9d0e-c8a3d270a556.png)
-
-For Tooling
-
-![image](https://user-images.githubusercontent.com/87030990/169172069-b82f545a-1d43-485f-ab68-0f639f479619.png)
-
-
 ## Step 5: Configuring DNS with Route53
 
 In the Route 53, A and alias Records were created for tooling and wordpress for accessibility from the internet
@@ -108,7 +93,5 @@ An alias record was created for the root domain and its traffic directed to the 
 
 ## Step 6: Check access to the websites from a browser
 
-Wordpress susccesfully launched
-
-![image](https://user-images.githubusercontent.com/87030990/169169246-b2d25919-8432-4a9c-a0f0-0a4562099522.png)
+NB: check access to the websites from a browser
 
